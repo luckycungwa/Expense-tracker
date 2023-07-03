@@ -7,14 +7,9 @@ function Home(props) {
   return (
     <>
       <div className="main-menu">
-        <div className="card-item"></div>
-
-        <div className="card-item"></div>
-
-        <div className="card-item"></div>
-
+        
         <div>
-          <div>
+          <div className="">
             <TransactionCard transactions={props.transactions} />
             <Transaction add={props.add} />
           </div>
