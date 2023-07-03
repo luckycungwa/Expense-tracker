@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import { useState } from "react";
+import "./App.css";
+// import my nodes
+import Transaction from "./comp/Transact";
+import TransactionCard from "./comp/TransactionCard";
+
+import Home from "./comp/Home";
 
 function App() {
+  //track transaction data in the array
+  const [transactions, setTransactions] = useState([]);
+
+  // adding transaction functionality
+  const add = (transactionItem, amount, transactionType) => {
+    //Set Transaction states
+    setTransactions((transactions) => [
+      ...transactions,
+      {
+        transactionItem: transactionItem,
+        amount: amount,
+        transactionType: transactionType,
+      },
+    ]);
+
+    console.log("My Transaction was: " + transactions);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="container">
+      <Home add={add} transactions={transactions} />
+
     </div>
   );
 }
