@@ -10,7 +10,7 @@ function App() {
   const [transactions, setTransactions] = useState([]);
 
   // adding transaction functionality
-  const add = (transactionItem, amount, transactionType) => {
+  const add = ((transactionItem, amount, transactionType) => {
     //Set Transaction states
     setTransactions((transactions) => [
       ...transactions,
@@ -18,14 +18,15 @@ function App() {
         transactionItem: transactionItem,
         amount: amount,
         transactionType: transactionType,
-      },
+      }
     ]);
-
+// Delete console after submission
     console.log("My Transaction was: " + transactions);
-  };
+  });
 
   return (
     <div className="main-menu">
+    {/* display components as per layout | Home */}
       <Home add={add} transactions={transactions} />
 
     </div>

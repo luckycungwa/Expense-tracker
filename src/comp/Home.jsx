@@ -6,19 +6,15 @@ import TransactionCard from "./TransactionCard";
 function Home(props) {
   return (
     <>
-      <div className="cover-card menu-items">
-        
-        <div className="card-item">
-          <div className="menu-items">
-          <div>
+      <div className="section">
+        <div className="container">
+        <div className="">
+            <Transaction add={props.add} />
+          </div>
+          <div  className="">
             <TransactionCard transactions={props.transactions} />
           </div>
-          <div>
-<Transaction add={props.add} />
-          </div>
-            
-            
-          </div>
+          
         </div>
       </div>
     </>
