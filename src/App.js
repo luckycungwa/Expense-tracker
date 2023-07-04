@@ -2,8 +2,6 @@ import React from "react";
 import { useState } from "react";
 import "./App.css";
 // import my nodes
-import Transaction from "./comp/Transact";
-import TransactionCard from "./comp/TransactionCard";
 
 import Home from "./comp/Home";
 
@@ -27,7 +25,7 @@ function App() {
   };
 
   return (
-    <div className="section">
+    <div className="main-menu">
       <Home add={add} transactions={transactions} />
 
     </div>

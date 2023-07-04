@@ -12,10 +12,10 @@ function Transaction(props) {
   };
 
   return (
-    <div className="section">
-    <h1>Create New Transaction</h1>
-
-      <form className="form" onSubmit={add}>
+    <>
+    <div className="section cover-card">
+      <form className="form" >
+        <h1>Create New Transaction</h1>
         <label className="label user-data">
           Expenditure:
           <input
@@ -26,31 +26,44 @@ function Transaction(props) {
           />
         </label>
         <label className="label user-data">
-          Price:
+         Price:   (R) 
           <input
-            type="text"
-            placeholder="Enter amount"
-            onChange={(e) => setAmount(e.target.value)}
+            type="number"
+            placeholder="Amount in Rands"
+            onChange={(e) => setAmount(e.target.value )}
             required
           />
         </label>
         <br />
-      <select onChange={(e) => setTransactiontype(e.target.value)}>
-        <option>Income</option>
-        <option>Expense</option>
-      </select>
-      <br></br>
-      <button className="cta-btn user-data" type="submit">
+        <select
+        type="select"
+          className="label user-data"
+          onChange={(e) => setTransactiontype(e.target.value)}
+          required
+        >
+          <option>Expense</option>
+          <option>Income</option>
+          
+        </select>
+        <br />
+
+        <br></br>
+        <button className="cta-btn user-data" type={add}>
           Add Transaction
         </button>
 
-      {/* <button className="cta-btn" onClick={add}>
+        {/* <button className="cta-btn" onClick={add}>
         Add transaction
       </button> */}
-
       </form>
-     
     </div>
+
+    <div className="cover-card">
+<div className="form">
+
+</div>
+    </div>
+    </>
   );
 }
 

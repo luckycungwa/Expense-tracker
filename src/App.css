@@ -13,7 +13,7 @@
 
   display: grid;
   grid:
-    "sidebar body" 1fr
+    "*" 1fr
     / auto 1fr;
   gap: 8px;
 }
@@ -22,6 +22,7 @@
   grid-area: sidebar;
   color: #e6e6e6;
 }
+
 a {
   color: #e6e6e6;
   text-decoration: none;
@@ -29,16 +30,14 @@ a {
 
 .body {
   grid-area: body;
-  
 }
 
 body {
   margin: 0;
   padding: 0px;
- display: block;
+  display: block;
   /* Control Pseudo RESPONSIVENESS */
   display: inline-flex;
-  
 }
 
 ul {
@@ -64,8 +63,8 @@ li {
 
 .form {
   min-width: 32vw;
-	background: #eeeeee;
-	
+  background: #eeeeee;
+
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -167,8 +166,7 @@ label {
 
 input,
 input:focus,
-textarea:focus,
-select:focus {
+textarea:focus {
   outline: none;
   text-decoration: none;
   margin: 4px;
@@ -176,12 +174,29 @@ select:focus {
   font-size: inherit;
   background-color: #ffffff;
   padding: 12px 8px 12px 8px;
-  border: 1px solid #fff;
-  appearance: none;
-  transition: all 0.6s ease;
+  border: 1px solid #2f2f2f;
+  /* appearance: none; */
+  transition: all 0.3s ease;
   display: inline-flex;
 }
 
+select {
+  text-decoration: none;
+  color: #333;
+  font-size: inherit;
+  background-color: #ffffff;
+  padding: 8px 4px 8px 4px;
+  border: 1px solid #2f2f2f;
+  /* appearance: none; */
+  transition: all 0.3s ease;
+  display: inline-flex;
+  border: 2px solid #9385ff;
+  font-weight: bold;
+}
+
+select:hover {
+  border: 2px solid #7462ff;
+}
 /* Display results */
 
 .profile {
@@ -225,11 +240,12 @@ select:focus {
   color: #000;
 }
 
-.user-data {
-  display: inline-flex;
-  gap: 12px;
-  margin: 8px;
+.transact-icon {
+  display: inline-block;
+  gap: 8px;
+  margin: 2px;
   flex-wrap: wrap;
+  background-color: #3053ff;
 }
 
 .user-title {
@@ -258,7 +274,6 @@ table {
   border-collapse: collapse;
   width: auto;
   flex-direction: row;
-  
 }
 
 th {
@@ -268,7 +283,6 @@ th {
   background-color: #151515;
   color: #ffffff;
 }
-
 
 td {
   padding: 8px;
@@ -316,7 +330,7 @@ td {
   display: inline-flex;
   position: absolute;
   width: auto;
-  height: auto; 
+  height: auto;
 }
 
 .mainSection {
@@ -367,10 +381,13 @@ td {
 }
 
 .main-menu {
+  width: 100px;
+
+  text-align: center;
   width: 100%;
 
-  display: flex;
-  gap: 30px;
+  display: inline-block;
+  gap: 12px;
   flex-wrap: wrap;
 
   justify-content: center;
@@ -397,10 +414,10 @@ td {
   padding: 0;
 }
 
-.title{
+.title {
   font-weight: 800;
   font-size: 48px;
   text-align: center;
-  margin:  0 0 0 128px;
+  margin: 0 0 0 128px;
   text-transform: uppercase;
 }

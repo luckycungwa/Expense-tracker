@@ -13,34 +13,34 @@ function TransactionCard(props) {
             <tr>
               <th>Expenditure</th>
               <th>Amount</th>
-              <th>Transaction</th>
+              <th>Type</th>
 
             </tr>
 
             </thead>
-{/* 
-      <h4>PREVIOUS TRANSACTIONS</h4> */}
+
+      
 
 {props.transactions.map((data) => (
-      
           <tr >
             <td>{data.transactionItem}</td>
             <td>{data.amount}</td>
             
-            <td className="user-title">
+            <td className="">
             {/* check if which tracsaction type was chosen (if it is an expense else it is an income)*/}
             {data.transactionType === "Expense" ? (
-                <div className="expenseIndicator"></div>
+                <div className="expense-icon"></div>
               ) : (
-                <div className="medium"></div>
+                <div className="transact-icon"></div>
               )}
               <h6>{data.transactionType}</h6>
             </td>
             
           </tr>
+          ))}
           </table>
     </div>
-))}
+
   </div>  
     
   );
