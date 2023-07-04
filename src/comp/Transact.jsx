@@ -17,19 +17,20 @@ function Transaction(props) {
       <div className="form" >
         <h1>Create New Transaction</h1>
         <label className="label user-data">
-         Source:
+         Expense:
           <input
             type="text"
-            placeholder="Enter item"
+            placeholder="enter source of expense"
             onChange={(e) => setTransactionItem(e.target.value)}
             required
           />
         </label>
+        <br/>
         <label className="label user-data">
-         Amount   (R) 
+         Amount:
           <input
             type="number"
-            placeholder="Amount in Rands"
+            placeholder="amount in Rands"
             onChange={(e) => setAmount(e.target.value )}
             required
           />
